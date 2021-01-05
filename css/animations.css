@@ -1,0 +1,86 @@
+@keyframes slidein {
+    0% {
+        margin-left: 0%;
+        width: 100%;
+    }
+    5% {
+        margin-left: 1%;
+        width: 101%;
+    }
+    10% {
+        margin-left: 2%;
+        width: 102%;
+    }
+    15% {
+        margin-left: 3%;
+        width: 103%;
+    }
+    20% {
+        margin-left: 4%;
+        width: 104%;
+    }
+    25% {
+        margin-left: 5%;
+        width: 105%;
+    }
+    30% {
+        margin-left: 6%;
+        width: 106%;
+    }
+    35% {
+        margin-left: 7%;
+        width: 107%;
+    }
+    40% {
+        margin-left: 8%;
+        width: 108%;
+    }
+    45% {
+        margin-left: 9%;
+        width: 109%;
+    }
+    50% {
+        margin-left: 10%;
+        width: 110%;
+    }
+    55% {
+        margin-left: 9%;
+        width: 109%;
+    }
+    60% {
+        margin-left: 8%;
+        width: 108%;
+    }
+    65% {
+        margin-left: 7%;
+        width: 107%;
+    }
+    70% {
+        margin-left: 6%;
+        width: 106%;
+    }
+    75% {
+        margin-left: 5%;
+        width: 105%;
+    }
+    80% {
+        margin-left: 4%;
+        width: 104%;
+    }
+    85% {
+        margin-left: 3%;
+        width: 103%;
+    }
+    90% {
+        margin-left: 2%;
+        width: 102%;
+    }
+    95% {
+        margin-left: 1%;
+        width: 101%;
+    }
+    100% {
+        margin-left: 0%;
+        width: 100%;
+    }
+}

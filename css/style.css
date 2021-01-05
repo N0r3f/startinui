@@ -1,0 +1,351 @@
+@import url(reset.css);
+div a img  {	
+	height: 8vh;
+	width: 8vw;
+}
+
+#desktop {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #19262c;
+	overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.window {
+	display:flex;
+	flex-direction:column;
+	flex-wrap: nowrap;
+    position: absolute;
+	overflow: hidden;
+    border: 2px solid #333;
+    background: #EEE;
+	border-radius: 0;
+    box-shadow:1px 1px 0 0;
+    opacity:80%;
+	z-index: 5;
+}
+
+.window:hover {
+	opacity:100%;
+}
+
+.window.closed {
+	display: none;
+}
+
+.window.minimizedWindow {
+	display: none;
+}
+
+.window.fullSizeWindow {
+	top: 0;
+    right: 0;
+    left: 0;
+	bottom: 5vh;
+	border-radius: 0;
+	transition: 1s;    
+}
+
+.fullSizeWindow .ui-resizable-handle {
+	display: none;
+}
+
+.windowHeader {
+    height: 28px;
+    padding: 2px;
+    background-color: #131d22;
+    border-bottom: 3px solid #008cd2;
+    text-align: right;
+    cursor: move;
+}
+
+.activeWindow .windowHeader {
+    background-color: #33afff;
+	opacity:100%;
+}
+
+.windowHeader > span {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 10px;
+    margin-left: 4px;
+    border: 2px solid #131d22;
+    border-radius: 5px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 19px;
+	color: #008cd2;
+    cursor: pointer;
+    overflow: hidden;
+	opacity:100%;
+}
+.windowHeader > span:hover {
+	background: rgba(255,255,255,0.3);
+	opacity:100%;
+}
+
+.windowHeader > span.winclose:hover {
+	background: #4a9dd3;
+}
+
+.windowHeader > span > span {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    height: 8px;
+    width: 10px;
+	opacity:100%;
+}
+
+.winminimize > span {
+	border-bottom: 3px solid #008cd2;
+}
+
+.winmaximize > span {
+	border: 2px solid #008cd2;
+	border-top: 3px solid #008cd2;
+	opacity:100%;
+}
+
+.winmaximize > span:nth-child(2) {
+	display: none;
+}
+
+.fullSizeWindow .winmaximize > span:nth-child(1) {
+	margin: 2px 0 0 -4px;
+}
+
+.fullSizeWindow .winmaximize > span:nth-child(2) {
+    display: inline-block;
+    top: 3px;
+    left: 12px;
+}
+
+.wincontent {
+    min-width: 200px;
+    min-height: 140px;
+    padding: 10px;
+    margin: 0px;
+	border-radius: 0 0 0px 0px;
+	opacity:100%;	
+}
+
+.windowHeader > strong {
+    float: left;
+    margin: 0px 3px 0 10px;
+    line-height: 29px;
+    font-size: 17px;
+}
+
+
+div>button#fullscreen {
+    display: block;
+    position: fixed;
+    bottom: 6vh;
+    right: 0.7vw;
+    width: 50px;
+    height: 50px;
+    border: 2px;
+    z-index: 20;
+    background-color: transparent;
+    opacity: 50%;
+}
+
+div>button#fullscreen:hover {
+    transition: ease 0.5s;
+    border-radius: 50%;
+    opacity: 100%;
+}
+
+
+.taskbarPanel {
+    display: inline-block;
+    border: 2px solid #008cd2;
+    border-radius: 2px;
+    line-height: 24px;
+    margin: 0 0 0 5px;
+    font-size: 17px;
+    padding: 0 10px;
+    background: #008cd2;
+    font-weight: bold;
+	cursor: pointer;
+}
+
+.taskbarPanel.activeTab {
+	background: #FFF;
+	opacity:65%;
+}
+
+.taskbarPanel.minimizedTab {
+	background: #AAA;	
+}
+
+.taskbarPanel.minimizedTab:hover {
+	background: #DDD;
+}
+
+.taskbarPanel.closed {
+	display: none;
+}
+
+#taskbar {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:no-wrap;
+	position: absolute;
+	height: 32px;
+	border-top: 2px solid #000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #131d22;
+}
+
+
+div#demarrer {
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/demarrer.png');
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    z-index: 6;
+}
+
+div>button#demarrer {
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/demarrer.png');
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+}
+
+div>button#demarrer:hover {
+    width: 31px;
+    height: 31px;
+    background-image: url('../img/demarrer.png');
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.644);
+    border: none;
+    z-index: 2;
+}
+div>button#demarrer:focus {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: auto;
+    bottom: 32px;
+    width: 350px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border: none;
+    z-index: 6;
+} 
+
+#icons {
+	display: block;
+   	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0px;
+	right: 0;
+	height: 5vh;
+	width: 5vw;
+	padding: 10px;
+	opacity: 80%;
+	z-index: 10;
+}
+
+#icons a {
+	display: block;
+	position: relative;
+    cursor: pointer;
+	opacity: 50%;
+	padding:2px;
+}
+
+#icons a:hover {
+	transition: ease 0.5s;
+	opacity: 100%;
+	border-color: #008cd2;
+	border-radius: 15%;
+	animation-duration: 0.5s;
+    animation-name: slidein;
+}	
+
+@keyframes slidein {
+  0% {margin-left: 0%; width: 100%;}
+  5% {margin-left: 1%; width: 101%;}
+  10% {margin-left: 2%; width: 102%;}
+  15% {margin-left: 3%; width: 103%;}
+  20% {margin-left: 4%; width: 104%;}
+  25% {margin-left: 5%; width: 105%;}
+  30% {margin-left: 6%; width: 106%;}
+  35% {margin-left: 7%; width: 107%;}
+  40% {margin-left: 8%; width: 108%;}
+  45% {margin-left: 9%; width: 109%;}
+  50% {margin-left: 10%; width: 110%;}
+  55% {margin-left: 9%; width: 109%;}
+  60% {margin-left: 8%; width: 108%;}
+  65% {margin-left: 7%; width: 107%;}
+  70% {margin-left: 6%; width: 106%;}
+  75% {margin-left: 5%; width: 105%;}
+  80% {margin-left: 4%; width: 104%;}
+  85% {margin-left: 3%; width: 103%;}
+  90% {margin-left: 2%; width: 102%;}
+  95% {margin-left: 1%; width: 101%;}
+  100% {margin-left: 0%; width: 100%;}
+}
+
+#templateLink {
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+/*Demo styles BEGIN*/
+#window {	top: 1%;	left: 10%;}
+
+#window .wincontent {	width: 660px; height: 400px;	}
+
+@media screen and (max-width:960px){
+	#window {	left: 10px;	}
+
+}
+@media screen and (max-width:770px){
+	#window .wincontent {	width: 460px;	}
+
+}
+@media screen and (max-width:540px){
+	
+#window .wincontent {	width: 230px; height: 200px;	
+    width: 275px;
+    height: auto;
+}
+}
